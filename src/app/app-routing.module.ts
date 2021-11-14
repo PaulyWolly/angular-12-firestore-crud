@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
   { path: 'tutorials', component: TutorialsListComponent },
   { path: 'add', component: AddTutorialComponent }
+
 ];
 
 @NgModule({

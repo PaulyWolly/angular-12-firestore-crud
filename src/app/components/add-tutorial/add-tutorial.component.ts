@@ -12,6 +12,7 @@ export class AddTutorialComponent implements OnInit {
 
   tutorial: Tutorial = new Tutorial();
   submitted = false;
+  message = '';
 
   constructor(
     private tutorialService: TutorialService,
@@ -19,13 +20,16 @@ export class AddTutorialComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.message = '';
   }
 
   saveTutorial(): void {
     this.tutorialService.create(this.tutorial).then(() => {
-      console.log('Created new item successfully!');
+
       this.submitted = true;
-      this.router.navigate(['/tutorials']);
+
+      setTimeout(() => {  this.router.navigate(['/tutorials']); }, 3000);
+
     });
   }
 

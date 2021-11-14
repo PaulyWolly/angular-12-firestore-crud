@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 import Tutorial from 'src/app/models/tutorial.model';
 import { TutorialService } from 'src/app/services/tutorial.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tutorial-details',
@@ -18,7 +19,10 @@ export class TutorialDetailsComponent implements OnInit, OnChanges {
   };
   message = '';
 
-  constructor(private tutorialService: TutorialService) { }
+  constructor(
+    private tutorialService: TutorialService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.message = '';
@@ -53,6 +57,13 @@ export class TutorialDetailsComponent implements OnInit, OnChanges {
     }
   }
 
+  confirmation(): void {
+    var result = confirm("Are you sure you wish to delete this tutorial?");
+    if(result){
+        this.deleteTutorial();
+    }
+}
+
   deleteTutorial(): void {
     if (this.currentTutorial.id) {
       this.tutorialService.delete(this.currentTutorial.id)
@@ -62,6 +73,10 @@ export class TutorialDetailsComponent implements OnInit, OnChanges {
         })
         .catch(err => console.log(err));
     }
+  }
+
+  clearTutorial() {
+    this.refreshList.emit();
   }
 
 }

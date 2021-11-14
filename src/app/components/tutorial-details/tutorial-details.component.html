@@ -7,7 +7,7 @@
     </div>
     <div class="form-group">
       <label for="description">Description</label>
-      <textarea type="text" id="description" class="md-textarea form-control" rows="3" name="description"
+      <textarea type="text" id="description" class="md-textarea form-control overFlow" rows="3" name="description"
         [(ngModel)]="currentTutorial.description"></textarea>
     </div>
 
@@ -20,17 +20,25 @@
   <button class="badge badge-primary mr-2" *ngIf="currentTutorial.published" (click)="updatePublished(false)">
     UnPublish
   </button>
+
   <button *ngIf="!currentTutorial.published" class="badge badge-primary mr-2" (click)="updatePublished(true)">
     Publish
   </button>
 
-  <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
+  <button class="badge badge-danger mr-2" (click)="confirmation()">
     Delete
   </button>
 
   <button type="submit" class="badge badge-success" (click)="updateTutorial()">
     Update
   </button>
+
+  &nbsp;
+  <button type="submit" class="badge badge-secondary" (click)="clearTutorial()">
+    Clear
+  </button>
+
+  <p>&nbsp;
   <p>{{ message }}</p>
 </div>
 

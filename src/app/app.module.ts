@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
 import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
 import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TutorialsListComponent } from './components/tutorials-list/tutorials-li
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule, // for firestore
+    AngularFirestoreModule,
+    NgbModule, // for firestore
   ],
   providers: [],
   bootstrap: [AppComponent]
