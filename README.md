@@ -2,10 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
 
- - Working demo hosted on Netlify: <a href="https://pw-angular12-firebase-crud.netlify.app/tutorials" target="_blank">pw-angular12-firebase-crud.netlify.app</a> 
+ - Working demo hosted on Netlify: <a href="https://pw-angular12-firebase-crud.netlify.app/tutorials" target="_blank">pw-angular12-firebase-crud.netlify.app</a>
 
 (Do a CTRL+click (on Windows and Linux) or CMD+click (on MacOS) on the link to open in a new tab - since Github is not set up to do "target=_blank")
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -29,3 +28,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# angular-12-firebase-crud
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+
+ - Working demo hosted on Netlify: <a href="https://pw-angular12-firebase-crud.netlify.app/tutorials" target="_blank">pw-angular12-firebase-crud.netlify.app</a>
+
+(Do a CTRL+click (on Windows and Linux) or CMD+click (on MacOS) on the link to open in a new tab - since Github is not set up to do "target=_blank")
