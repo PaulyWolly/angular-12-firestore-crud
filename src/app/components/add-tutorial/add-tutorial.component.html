@@ -1,5 +1,4 @@
-<div class="submit-form">
-
+<div class='submit-form'>
 
   <div *ngIf="!submitted">
     <span><i style="color: red;">*</i> = Required</span>
@@ -30,8 +29,14 @@
     </div>
 
 
+    <!-- <button type="submit" [disabled]="!ngForm.valid" (click)="saveTutorial()">Submit</button> -->
+    <!-- <button type="submit" class="btn btn-primary" [disabled]="title === ''">Submit</button> -->
+    <!--     <button type="submit" [disabled]="!title || !description" class="btn btn-default"
+      (click)="getValues($event, title, description)">Add Data</button> -->
 
-    <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success" (click)="saveTutorial()">Submit</button>
+
+    <!-- <button (click)="saveTutorial()" class="btn btn-success">Submit</button> -->
 
   </div>
 
@@ -43,5 +48,3 @@
 
     <!-- redirect to main list page -->
   </div>
-
-</div>

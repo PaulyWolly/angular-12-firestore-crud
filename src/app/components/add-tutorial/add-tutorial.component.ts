@@ -13,6 +13,8 @@ export class AddTutorialComponent implements OnInit {
   tutorial: Tutorial = new Tutorial();
   submitted = false;
   message = '';
+  title = false;
+  description = false;
 
   constructor(
     private tutorialService: TutorialService,
@@ -36,6 +38,10 @@ export class AddTutorialComponent implements OnInit {
   newTutorial(): void {
     this.submitted = false;
     this.tutorial = new Tutorial();
+  }
+
+  getValues(title: string) {
+    console.log('title: ' + title)
   }
 
 }
