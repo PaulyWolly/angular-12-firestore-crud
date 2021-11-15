@@ -1,0 +1,16 @@
+.list {
+	text-align: left;
+	max-width: 750px;
+	margin: auto;
+}
+
+li.list-group-item:hover {
+	background-color: #257cff;
+	color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+li.list-group-item:active:hover {
+	background-color: #0d6efd;
+	color: rgb(255, 254, 254);
+}
